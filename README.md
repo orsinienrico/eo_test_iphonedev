@@ -1,6 +1,15 @@
 # EO Test App
 
-Progetto vuoto per lo sviluppo di un'app web accessibile da browser (HTML/CSS/JS puro, nessuna build richiesta).
+App web accessibile da browser (HTML/CSS/JS puro, nessuna build richiesta).
+
+## Note riunione
+
+Prima funzione dell'app: incolli le note o la trascrizione di una riunione e ottieni
+decisioni, azioni (con owner e scadenza, se presenti), punti aperti e una bozza di email
+di follow-up in italiano, copiabile o apribile in Mail.
+
+L'estrazione usa regole su parole chiave italiane (e alcune inglesi): funziona offline,
+senza servizi esterni. La logica è in `js/app.js` (`analyze` e `buildFollowup`).
 
 ## Struttura
 

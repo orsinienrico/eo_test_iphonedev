@@ -3,13 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>EO Test App</title>
+  <title>Note riunione</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <main id="app">
-    <h1>EO Test App</h1>
-    <p>Progetto vuoto pronto per lo sviluppo.</p>
+    <header>
+      <h1>Note riunione</h1>
+      <p class="sub">Incolla le note e ottieni decisioni, azioni e una bozza di follow-up.</p>
+    </header>
+
+    <section class="card">
+      <label for="notes">Note o trascrizione</label>
+      <textarea id="notes" rows="9" placeholder="Es. Deciso di migrare il servizio entro fine mese. Marco prepara il piano entro venerdì. Da chiarire il budget."></textarea>
+      <div class="row">
+        <button id="analyze" class="primary" type="button">Analizza</button>
+        <button id="example" type="button">Esempio</button>
+        <button id="clear" type="button">Pulisci</button>
+      </div>
+    </section>
+
+    <section id="results" class="hidden" aria-live="polite">
+      <article class="card">
+        <h2>Decisioni</h2>
+        <ul id="decisions"></ul>
+      </article>
+
+      <article class="card">
+        <h2>Azioni</h2>
+        <ul id="actions"></ul>
+      </article>
+
+      <article class="card">
+        <h2>Punti aperti</h2>
+        <ul id="open"></ul>
+      </article>
+
+      <article class="card">
+        <h2>Bozza di follow-up</h2>
+        <textarea id="followup" rows="12"></textarea>
+        <div class="row">
+          <button id="copy" class="primary" type="button">Copia</button>
+          <button id="mail" type="button">Apri in Mail</button>
+        </div>
+        <p id="status" class="status" role="status"></p>
+      </article>
+    </section>
   </main>
   <script src="js/app.js"></script>
 </body>
